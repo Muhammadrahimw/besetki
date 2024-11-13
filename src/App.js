@@ -5,6 +5,7 @@ import Sellers from "./components/main/sellers/sellers";
 import Comments from "./components/main/comments/comments";
 import About from "./components/main/about/about";
 import News from "./components/main/news/news";
+import Footer from "./components/footer/footer";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<Comments />
 			<About />
 			<News />
+			<Footer />
 		</div>
 	);
 }

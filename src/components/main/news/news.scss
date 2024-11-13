@@ -3,7 +3,9 @@
 .news {
 	margin: 3em 0;
 	.hdg {
-		margin-bottom: 0.5em;
+		margin: 0 5%;
+		margin-bottom: 1.5em;
+		font-weight: 900;
 	}
 	.new_body {
 		display: grid;
@@ -11,13 +13,51 @@
 		gap: 1.5em;
 		.new_card {
 			.new_img {
-				width: 30em;
+				width: 100%;
 				height: 14em;
 				background-image: url("../../../../public/elements/13.png");
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center;
+				border-radius: 0.25em;
 			}
+			.new_txt {
+				.prg {
+					font-weight: 900;
+					color: $red-color;
+					margin-top: 0.5em;
+					margin-bottom: 0.25em;
+				}
+				.lorem {
+					margin-top: 0.5em;
+				}
+				.link {
+					margin-top: 0.5em;
+					font-weight: 900;
+					text-decoration: underline;
+					color: $red-color;
+				}
+			}
+		}
+	}
+}
+
+// media
+
+@media (max-width: 1024px) {
+	.news {
+		.new_body {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.news {
+		.new_body {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 }
