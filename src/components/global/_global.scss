@@ -1,0 +1,49 @@
+@use "./variables" as *;
+
+@font-face {
+	font-family: "Museo";
+	src: url(../../../public/elements/museosanscyrl_100.otf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Museo";
+}
+
+.ctr {
+	width: 90%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: $black-color;
+}
+
+.sprg {
+	font-size: 0.87em;
+	font-weight: 400;
+}
+
+.prg {
+	font-size: 1.17em;
+	font-weight: 400;
+}
+
+.bprg {
+	font-size: 1.4em;
+	font-weight: 600;
+}
+
+.hdg {
+	font-size: 2em;
+	font-weight: 400;
+}
+
+.btn {
+	width: 14em;
+	height: 2.75em;
+	cursor: pointer;
+}

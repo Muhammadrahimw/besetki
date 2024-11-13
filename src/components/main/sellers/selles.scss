@@ -1,0 +1,185 @@
+@use "../../global/variables" as *;
+
+.sellers {
+	.seller_section {
+		div {
+			&:nth-child(1) {
+				@include btw;
+				h2 {
+					margin-bottom: 0.5em;
+					font-weight: 900;
+				}
+				.all_button {
+					@include center;
+					gap: 0.25em;
+					border: none;
+					background-color: transparent;
+					font-size: 1.25em;
+					p,
+					.seller_rightIcon {
+						color: $gray-color;
+					}
+					.seller_rightIcon {
+						font-size: 0.65em;
+						margin-top: 0.1em;
+					}
+				}
+			}
+		}
+		.seller_category {
+			width: 100%;
+			background-color: #f9f8f3;
+			margin-bottom: 1em;
+			button {
+				width: 10em;
+				height: 3.75em;
+				font-size: 1em;
+				background-color: transparent;
+				border: none;
+				color: gray;
+			}
+			.seller_category-active {
+				background-color: $white-color;
+				border-bottom: $red-color;
+				color: $black-color;
+				font-weight: 900;
+			}
+		}
+	}
+}
+
+.seller_body {
+	font-size: 0.89em;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	.product {
+		display: flex;
+		flex-direction: column;
+		padding: 0.5em;
+		border: 1px solid rgba(128, 128, 128, 0.233);
+		border-radius: 0.35em;
+		.product_info {
+			padding: 0.5em;
+			div {
+				&:nth-child(1) {
+					margin-top: 0.25em;
+				}
+				@include btw;
+				margin-top: 0.5em;
+				div {
+					@include center;
+					justify-content: flex-start;
+					gap: 0.5em;
+					.productIcon {
+						color: $orange-color;
+					}
+				}
+			}
+			#title {
+				font-weight: 900;
+				margin: 0.5em 0;
+			}
+			.product_buying {
+				margin-top: 1em;
+				@include btw;
+				gap: 0.25em;
+				#price {
+					display: flex;
+					flex-direction: column;
+					div {
+						@include btw;
+						gap: 0.25em;
+						.sprg {
+							text-decoration: line-through;
+							color: $gray-color;
+							margin-top: 0.4em;
+						}
+						div {
+							width: 3.25em;
+							height: 1.5em;
+							background-color: $gold-color;
+							@include center;
+							p {
+								color: $black-color;
+								font-weight: 700;
+							}
+						}
+					}
+					.bprg {
+						color: $red-color;
+						font-weight: 900;
+					}
+				}
+				button {
+					font-size: 1em;
+					width: 8.18em;
+					height: 3.5em;
+					color: $black-color;
+					margin-top: 0.6em;
+					background-color: $gold-color;
+					border: none;
+					border-radius: 0.35em;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+.seller_section2 {
+	margin-top: 2em;
+}
+
+.backgroundImageStyle {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 15.6em;
+}
+
+// media
+
+@media (max-width: 1490px) {
+	.seller_body {
+		grid-template-columns: repeat(4, 1fr);
+		transition: 0.4s;
+	}
+}
+
+@media (max-width: 1180px) {
+	.seller_body {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 900px) {
+	.seller_body {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 580px) {
+	.seller_body {
+		font-size: 0.75em;
+	}
+}
+
+@media (max-width: 500px) {
+	.seller_body {
+		grid-template-columns: repeat(1, 1fr);
+		font-size: 1.25em;
+	}
+}
+
+@media (max-width: 420px) {
+	.seller_body {
+		font-size: 1em;
+	}
+}
+
+@media (max-width: 333px) {
+	.seller_body {
+		font-size: 0.8em;
+	}
+}

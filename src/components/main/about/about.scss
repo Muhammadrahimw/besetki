@@ -1,0 +1,83 @@
+@use "../../global/variables" as *;
+
+.about {
+	margin-top: 3.75em;
+	@include btw;
+	gap: 3em;
+	.about_txt {
+		.hdg {
+			font-weight: 900;
+		}
+		p,
+		b {
+			line-height: 1.5;
+		}
+		hr {
+			margin: 1em 0;
+			margin-bottom: 2em;
+			height: 2px;
+			border-radius: 1px;
+			border: 1px solid $orange-color;
+			background-color: $orange-color;
+		}
+		.lorem2 {
+			margin-top: 1.5em;
+			@include center;
+			gap: 1em;
+			align-items: flex-start;
+			font-weight: 900;
+			b {
+				margin-top: 1em;
+				span {
+					font-weight: 600;
+					color: $gray-color;
+				}
+			}
+		}
+	}
+	.about_img {
+		img {
+			width: 42em;
+		}
+	}
+}
+
+// media
+
+@media (max-width: 1360px) {
+	.about {
+		font-size: 0.8em;
+		transition: 0.4s;
+	}
+}
+
+@media (max-width: 1080px) {
+	.about {
+		font-size: 0.6em;
+	}
+}
+
+@media (max-width: 768px) {
+	.about {
+		font-size: 1em;
+		flex-direction: column;
+		.about_img {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.about {
+		font-size: 0.75em;
+	}
+}
+
+@media (max-width: 360px) {
+	.about {
+		font-size: 0.6em;
+	}
+}

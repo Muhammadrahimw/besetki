@@ -1,0 +1,23 @@
+@use "../../global/variables" as *;
+
+.news {
+	margin: 3em 0;
+	.hdg {
+		margin-bottom: 0.5em;
+	}
+	.new_body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5em;
+		.new_card {
+			.new_img {
+				width: 30em;
+				height: 14em;
+				background-image: url("../../../../public/elements/13.png");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+	}
+}
