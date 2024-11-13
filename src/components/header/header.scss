@@ -347,3 +347,23 @@ header {
 		transition: 0.4s;
 	}
 }
+
+@media (max-width: 360px) {
+	.header_main {
+		gap: 0em;
+		.search {
+			.search_container {
+				.search_submit {
+					width: 6em;
+					transition: 0.4s;
+				}
+			}
+		}
+	}
+	.barsIcon {
+		font-size: 2.5em;
+	}
+	.showcase {
+		padding-left: 20px;
+	}
+}
